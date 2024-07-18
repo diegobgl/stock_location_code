@@ -1,10 +1,11 @@
 <odoo>
-    <record id="view_location_form" model="ir.ui.view">
-        <field name="name">stock.location.form</field>
+    <record id="view_location_form_inherit" model="ir.ui.view">
+        <field name="name">stock.location.form.inherit</field>
         <field name="model">stock.location</field>
         <field name="inherit_id" ref="stock.view_location_form"/>
         <field name="arch" type="xml">
-            <field name="name" position="before">
+            <field name="name" position="after">
+                <label for="code"/>
                 <field name="code" string="Location Code"/>
             </field>
         </field>
